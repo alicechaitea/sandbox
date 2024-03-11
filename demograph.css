@@ -1,0 +1,78 @@
+canvas {
+    position: relative;
+}
+
+#region {
+    margin-right: 15px;
+}
+
+#yearSlider {
+    width: 100%;  /* Set the desired width. Here I set it to 80% of the container's width */
+    display: grid;  /* This will center the slider if the container's width is set to 100% */
+    grid-template-columns: max-content;
+    
+}
+
+.slider-container {
+    position: relative;
+    width: 100%; /* Adjust to your preference */
+    margin-left: 0; /* Center the slider */
+}
+
+.year-ruler {
+    display: flex;
+    justify-content: space-between; /* Distributes children evenly */
+    width: 10%; /* Makes sure the ruler spans the entire width of its container */
+    margin-left: 70px;
+}
+
+.year-ruler span {
+    white-space: nowrap; /* Prevents the year from breaking into two lines */
+    display: none;
+}
+
+/* Remove default appearance of the slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+    width: 20px; /* Adjust width and height to fit your design */
+    height: 20px;
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    background-color: #666;
+    border-radius: 0; /* Remove any border-radius */
+    border: none; /* Remove borders */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    background-color: transparent;
+    border-radius: none;
+    border: none;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+    background-color: transparent;
+    border-radius: none;
+    border: none;
+}
+
+
+/* Styling the thumb as an upside-down triangle */
+input[type="range"]::-webkit-slider-thumb {
+    clip-path: polygon(50% 100%, 0% 20%, 100% 20%);
+    background-color: #666; 
+}
+
+input[type="range"]::-moz-range-thumb {
+    clip-path: polygon(50% 100%, 0% 20%, 100% 20%);
+    background-color: #666; 
+}
+
+input[type="range"]::-ms-thumb {
+    clip-path: polygon(50% 100%, 0% 20%, 100% 20%);
+    background-color: #666; 
+}
+

@@ -11,7 +11,7 @@ app.use(express.json()); // Parse JSON request body
 const PORT = 3000;
 
 const db = mysql.createConnection({
-    host: '35.240.196.80',
+    host: 'localhost',
     user: 'root',
     password: 'dtlsfmrd89',
     database: 'sys'
